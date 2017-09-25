@@ -6,7 +6,7 @@
 //  Copyright © 2017年 广州凯笙. All rights reserved.
 //
 //  ⚠️⚠️⚠️注意
-//  创建Slider时，设置Frame的size至少需要(40, 300)，否则无法完全显示Slider
+//  创建Slider时，设置Frame的size至少需要(40, 250)，否则无法完全显示Slider
 //  ⚠️⚠️⚠️⚠️⚠️
 
 #define SliderW 15
