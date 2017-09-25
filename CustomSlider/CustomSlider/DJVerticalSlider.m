@@ -10,17 +10,15 @@
 //  ⚠️⚠️⚠️⚠️⚠️
 
 #define SliderW 15
-#define SliderH 275
+#define SliderH 250
 #define ThumbImageWH 37
 
 #define Slider_StartX 20
 #define Slider_StartY 13
 
-#define EQPARA 0.058048381
+#import "DJVerticalSlider.h"
 
-#import "KSVerticalSlider.h"
-
-@interface KSVerticalSlider ()
+@interface DJVerticalSlider ()
 
 @property (nonatomic, strong) UIImage *thumbImage;
 @property (nonatomic, assign) CGRect sliderRect;        //sliderFrame
@@ -31,7 +29,7 @@
 
 @end
 
-@implementation KSVerticalSlider
+@implementation DJVerticalSlider
 
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -108,14 +106,6 @@
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
     [super continueTrackingWithTouch:touch withEvent:event];
     CGPoint point = [touch locationInView:self];
-//    CGFloat thumbImageY = 0;
-//    if (point.y <= Slider_StartY) {
-//        thumbImageY = Slider_StartY-ThumbImageWH/2;
-//    } else if (point.y > Slider_StartY && point.y < Slider_StartY+SliderH) {
-//        thumbImageY = point.y-ThumbImageWH/2;
-//    } else if (point.y >= Slider_StartY+SliderH) {
-//        thumbImageY = Slider_StartY+SliderH-ThumbImageWH/2;
-//    }
     
     CGFloat currentOffsetY = 0;
     CGFloat thumbOffsetY = 0;
@@ -163,8 +153,6 @@
 - (void)getCurrentValueWithOffsetY:(CGFloat)value {
     // 获取正常值
     [self getSliderValue:value];
-    // 获取HPF,LPF的eq值
-    [self getSliderEqValue:value];
 }
 
 /**
@@ -182,40 +170,12 @@
     }
 }
 
-/**
- *  获取输出eqValue
- *  self.eqValue  20-20k
- */
-- (void)getSliderEqValue:(CGFloat)value {
-    CGFloat percent = value/(SliderH);
-    CGFloat outputValue = percent*120;
-    CGFloat hzValue = 0;
-    CGFloat eqValue = EQPARA*outputValue;
-    hzValue = 20.0*pow(M_E, eqValue);          //计算e的x次方
-    if(hzValue > 20000) {
-        hzValue = 20000;
-    }
-    self.eqValue = hzValue;
-}
-
 //根据value定位thumbImage
 - (void)setSliderThumbLocationByValue:(CGFloat)value {
     CGFloat perY = SliderH/(self.maxValue-self.minValue);
     CGFloat marginValue = value-self.minValue;
     if(value >= self.minValue && value <= self.maxValue) {
         self.thumbRect = CGRectMake(Slider_StartX-ThumbImageWH/2, marginValue*perY+Slider_StartY-ThumbImageWH/2, ThumbImageWH, ThumbImageWH);
-        self.isFirst = YES;
-        [self setNeedsDisplay];
-    }
-}
-
-//根据eqValue定位thumbImage
-- (void)setSliderThumbLocationByEqValue:(CGFloat)eqValue {
-    CGFloat hzValue = 0;
-    if(eqValue >= 20 && eqValue <= 20000) {
-        hzValue = logf(eqValue/20.0)/EQPARA;
-        CGFloat perY = (CGFloat)SliderH/120;
-        self.thumbRect = CGRectMake(Slider_StartX-ThumbImageWH/2, hzValue*perY+Slider_StartY-ThumbImageWH/2, ThumbImageWH, ThumbImageWH);
         self.isFirst = YES;
         [self setNeedsDisplay];
     }

@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F006E2AB1F67B6A700740EBB /* UIImage+RoundedRectImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F006E2AA1F67B6A700740EBB /* UIImage+RoundedRectImage.m */; };
-		F02D30CE1F692AA600DBA458 /* KSVerticalSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F02D30CD1F692AA600DBA458 /* KSVerticalSlider.m */; };
+		F02D30CE1F692AA600DBA458 /* DJVerticalSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F02D30CD1F692AA600DBA458 /* DJVerticalSlider.m */; };
 		F02D30D01F692BBD00DBA458 /* thumb-vertical-on.png in Resources */ = {isa = PBXBuildFile; fileRef = F02D30CF1F692BBD00DBA458 /* thumb-vertical-on.png */; };
-		F0657B1F1F677D8D00857E33 /* DJSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F0657B1E1F677D8D00857E33 /* DJSlider.m */; };
+		F0657B1F1F677D8D00857E33 /* DJHorizontalSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F0657B1E1F677D8D00857E33 /* DJHorizontalSlider.m */; };
 		F069FECC1F6680840074B540 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F069FECB1F6680840074B540 /* main.m */; };
 		F069FECF1F6680840074B540 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F069FECE1F6680840074B540 /* AppDelegate.m */; };
 		F069FED21F6680840074B540 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F069FED11F6680840074B540 /* ViewController.m */; };
@@ -19,14 +18,9 @@
 		F069FEDA1F6680840074B540 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F069FED81F6680840074B540 /* LaunchScreen.storyboard */; };
 		F069FEE51F6680840074B540 /* CustomSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F069FEE41F6680840074B540 /* CustomSliderTests.m */; };
 		F069FEF01F6680840074B540 /* CustomSliderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F069FEEF1F6680840074B540 /* CustomSliderUITests.m */; };
-		F069FEFF1F6680A40074B540 /* KSSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F069FEFE1F6680A40074B540 /* KSSlider.m */; };
-		F069FF041F66822A0074B540 /* stretch_Left_Track.png in Resources */ = {isa = PBXBuildFile; fileRef = F069FF001F66822A0074B540 /* stretch_Left_Track.png */; };
-		F069FF051F66822A0074B540 /* stretch_Right_Track.png in Resources */ = {isa = PBXBuildFile; fileRef = F069FF011F66822A0074B540 /* stretch_Right_Track.png */; };
 		F069FF061F66822A0074B540 /* thumb-off-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = F069FF021F66822A0074B540 /* thumb-off-normal.png */; };
 		F069FF071F66822A0074B540 /* thumb-horizontal-on.png in Resources */ = {isa = PBXBuildFile; fileRef = F069FF031F66822A0074B540 /* thumb-horizontal-on.png */; };
-		F069FF0A1F6689B70074B540 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = F069FF091F6689B70074B540 /* CustomSlider.m */; };
 		F07D75F11F6A66FA0085EDEE /* thumb-off.png in Resources */ = {isa = PBXBuildFile; fileRef = F07D75F01F6A66FA0085EDEE /* thumb-off.png */; };
-		F09284921F78FEAC00512441 /* ABCView.m in Sources */ = {isa = PBXBuildFile; fileRef = F09284911F78FEAC00512441 /* ABCView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F006E2A91F67B6A700740EBB /* UIImage+RoundedRectImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedRectImage.h"; sourceTree = "<group>"; };
-		F006E2AA1F67B6A700740EBB /* UIImage+RoundedRectImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedRectImage.m"; sourceTree = "<group>"; };
-		F02D30CC1F692AA600DBA458 /* KSVerticalSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSVerticalSlider.h; sourceTree = "<group>"; };
-		F02D30CD1F692AA600DBA458 /* KSVerticalSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSVerticalSlider.m; sourceTree = "<group>"; };
+		F02D30CC1F692AA600DBA458 /* DJVerticalSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJVerticalSlider.h; sourceTree = "<group>"; };
+		F02D30CD1F692AA600DBA458 /* DJVerticalSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJVerticalSlider.m; sourceTree = "<group>"; };
 		F02D30CF1F692BBD00DBA458 /* thumb-vertical-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-vertical-on.png"; sourceTree = "<group>"; };
-		F0657B1D1F677D8D00857E33 /* DJSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSlider.h; sourceTree = "<group>"; };
-		F0657B1E1F677D8D00857E33 /* DJSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSlider.m; sourceTree = "<group>"; };
+		F0657B1D1F677D8D00857E33 /* DJHorizontalSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJHorizontalSlider.h; sourceTree = "<group>"; };
+		F0657B1E1F677D8D00857E33 /* DJHorizontalSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJHorizontalSlider.m; sourceTree = "<group>"; };
 		F069FEC71F6680840074B540 /* CustomSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F069FECB1F6680840074B540 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F069FECD1F6680840074B540 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,17 +62,9 @@
 		F069FEEB1F6680840074B540 /* CustomSliderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomSliderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F069FEEF1F6680840074B540 /* CustomSliderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSliderUITests.m; sourceTree = "<group>"; };
 		F069FEF11F6680840074B540 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F069FEFD1F6680A40074B540 /* KSSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSlider.h; sourceTree = "<group>"; };
-		F069FEFE1F6680A40074B540 /* KSSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlider.m; sourceTree = "<group>"; };
-		F069FF001F66822A0074B540 /* stretch_Left_Track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stretch_Left_Track.png; sourceTree = "<group>"; };
-		F069FF011F66822A0074B540 /* stretch_Right_Track.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stretch_Right_Track.png; sourceTree = "<group>"; };
 		F069FF021F66822A0074B540 /* thumb-off-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-off-normal.png"; sourceTree = "<group>"; };
 		F069FF031F66822A0074B540 /* thumb-horizontal-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-horizontal-on.png"; sourceTree = "<group>"; };
-		F069FF081F6689B70074B540 /* CustomSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
-		F069FF091F6689B70074B540 /* CustomSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		F07D75F01F6A66FA0085EDEE /* thumb-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb-off.png"; sourceTree = "<group>"; };
-		F09284901F78FEAC00512441 /* ABCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCView.h; sourceTree = "<group>"; };
-		F09284911F78FEAC00512441 /* ABCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,20 +119,10 @@
 				F069FECE1F6680840074B540 /* AppDelegate.m */,
 				F069FED01F6680840074B540 /* ViewController.h */,
 				F069FED11F6680840074B540 /* ViewController.m */,
-				F069FEFD1F6680A40074B540 /* KSSlider.h */,
-				F069FEFE1F6680A40074B540 /* KSSlider.m */,
-				F069FF081F6689B70074B540 /* CustomSlider.h */,
-				F069FF091F6689B70074B540 /* CustomSlider.m */,
-				F0657B1D1F677D8D00857E33 /* DJSlider.h */,
-				F0657B1E1F677D8D00857E33 /* DJSlider.m */,
-				F02D30CC1F692AA600DBA458 /* KSVerticalSlider.h */,
-				F02D30CD1F692AA600DBA458 /* KSVerticalSlider.m */,
-				F006E2A91F67B6A700740EBB /* UIImage+RoundedRectImage.h */,
-				F006E2AA1F67B6A700740EBB /* UIImage+RoundedRectImage.m */,
-				F09284901F78FEAC00512441 /* ABCView.h */,
-				F09284911F78FEAC00512441 /* ABCView.m */,
-				F069FF001F66822A0074B540 /* stretch_Left_Track.png */,
-				F069FF011F66822A0074B540 /* stretch_Right_Track.png */,
+				F0657B1D1F677D8D00857E33 /* DJHorizontalSlider.h */,
+				F0657B1E1F677D8D00857E33 /* DJHorizontalSlider.m */,
+				F02D30CC1F692AA600DBA458 /* DJVerticalSlider.h */,
+				F02D30CD1F692AA600DBA458 /* DJVerticalSlider.m */,
 				F069FF021F66822A0074B540 /* thumb-off-normal.png */,
 				F07D75F01F6A66FA0085EDEE /* thumb-off.png */,
 				F069FF031F66822A0074B540 /* thumb-horizontal-on.png */,
@@ -299,10 +273,8 @@
 			files = (
 				F069FF071F66822A0074B540 /* thumb-horizontal-on.png in Resources */,
 				F02D30D01F692BBD00DBA458 /* thumb-vertical-on.png in Resources */,
-				F069FF041F66822A0074B540 /* stretch_Left_Track.png in Resources */,
 				F069FEDA1F6680840074B540 /* LaunchScreen.storyboard in Resources */,
 				F069FF061F66822A0074B540 /* thumb-off-normal.png in Resources */,
-				F069FF051F66822A0074B540 /* stretch_Right_Track.png in Resources */,
 				F069FED71F6680840074B540 /* Assets.xcassets in Resources */,
 				F069FED51F6680840074B540 /* Main.storyboard in Resources */,
 				F07D75F11F6A66FA0085EDEE /* thumb-off.png in Resources */,
@@ -330,15 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F02D30CE1F692AA600DBA458 /* KSVerticalSlider.m in Sources */,
-				F006E2AB1F67B6A700740EBB /* UIImage+RoundedRectImage.m in Sources */,
-				F0657B1F1F677D8D00857E33 /* DJSlider.m in Sources */,
+				F02D30CE1F692AA600DBA458 /* DJVerticalSlider.m in Sources */,
+				F0657B1F1F677D8D00857E33 /* DJHorizontalSlider.m in Sources */,
 				F069FED21F6680840074B540 /* ViewController.m in Sources */,
 				F069FECF1F6680840074B540 /* AppDelegate.m in Sources */,
-				F069FEFF1F6680A40074B540 /* KSSlider.m in Sources */,
 				F069FECC1F6680840074B540 /* main.m in Sources */,
-				F09284921F78FEAC00512441 /* ABCView.m in Sources */,
-				F069FF0A1F6689B70074B540 /* CustomSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Keisun.CustomSlider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -506,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Keisun.CustomSlider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

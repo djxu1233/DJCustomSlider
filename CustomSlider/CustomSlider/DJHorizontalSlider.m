@@ -18,10 +18,9 @@
 
 #define EQPARA 0.058048381
 
-#import "DJSlider.h"
-#import "UIImage+RoundedRectImage.h"
+#import "DJHorizontalSlider.h"
 
-@interface DJSlider ()
+@interface DJHorizontalSlider ()
 
 @property (nonatomic, strong) UIImage *thumbImage;
 @property (nonatomic, assign) CGRect sliderRect;        //sliderFrame
@@ -33,7 +32,7 @@
 @end
 
 
-@implementation DJSlider
+@implementation DJHorizontalSlider
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -80,10 +79,6 @@
     [[UIColor colorWithRed:189/255.0f green:189/255.0f blue:189/255.0f alpha:1.0f] setStroke];
     [path fill];
     [path stroke];
-    
-    // 用图片画高亮滑杆（会被拉伸！！！）
-//    UIImage *bgImg = [UIImage createRoundedRectImage:[UIImage imageNamed:@"stretch_Left_Track"] size:CGSizeMake(self.thumbRect.origin.x+ThumbImageW/2, SliderH) radius:SliderH/2];
-//    [bgImg drawInRect:CGRectMake(ThumbImageW/2-Slider_StartX, Slider_StartY-7.5, self.thumbRect.origin.x+ThumbImageW/2, SliderH)];
 }
 
 - (void)loadThumWithContext:(CGContextRef)context {
@@ -144,15 +139,10 @@
             thumbOffsetX = Slider_StartX+SliderW-ThumbImageWH/2;
         }
         currentOffsetX = perX*count;
-
-        NSLog(@"pointXXX--->%.2f thumbOffsetX===%f",point.x-Slider_StartX, thumbOffsetX);
-        NSLog(@"perX-->%f count--->%.2f", perX,count);
-        NSLog(@"countPer-->%f",count*perX);
-        
     }
 
     self.thumbRect = CGRectMake(thumbOffsetX, self.thumbRect.origin.y, ThumbImageWH, ThumbImageWH);
-    [self getCurrentValueWithOffsetX:currentOffsetX];         //thumbImageX-(Slider_StartX-ThumbImageWH/2)
+    [self getCurrentValueWithOffsetX:currentOffsetX];
     [self setNeedsDisplay];
 
     //增加控制事件
@@ -182,8 +172,6 @@
 - (void)getCurrentValueWithOffsetX:(CGFloat)value {
     // 获取正常值
     [self getSliderValue:value];
-    // 获取HPF,LPF的eq值
-    [self getSliderEqValue:value];
 }
 
 /**
@@ -191,35 +179,9 @@
  *  value
  */
 - (void)getSliderValue:(CGFloat)value {
-//    NSLog(@"valueAAAAAA====%f",value);
     CGFloat percent = value/(SliderW);
-    if (_isFine) {
-        CGFloat count = self.minValue+percent*(self.maxValue-self.minValue);
-        self.value = count;
-    } else {
-        CGFloat longValue = (self.maxValue-self.minValue);
-//        NSLog(@"xxxxxxx=====%f",percent*longValue);
-        CGFloat num = (10*percent*longValue)/10;
-        CGFloat count = self.minValue+num;
-        NSLog(@"percent===%.2f longValue==%.2f num===%.2f valueCount===%.2f", percent,longValue, num ,count);
-        self.value = count;
-    }
-}
-
-/**
- *  获取输出eqValue
- *  self.eqValue  20-20k
- */
-- (void)getSliderEqValue:(CGFloat)value {
-    CGFloat percent = value/(SliderW);
-    CGFloat outputValue = percent*120;
-    CGFloat hzValue = 0;
-    CGFloat eqValue = EQPARA*outputValue;
-    hzValue = 20.0*pow(M_E, eqValue);          //计算e的x次方
-    if(hzValue > 20000) {
-        hzValue = 20000;
-    }
-    self.eqValue = hzValue;
+    CGFloat count = _minValue+percent*(_maxValue-_minValue);
+    self.value = count;
 }
 
 //根据value定位thumbImage
@@ -232,19 +194,6 @@
         [self setNeedsDisplay];
     }
 }
-
-//根据eqValue定位thumbImage
-- (void)setSliderThumbLocationByEqValue:(CGFloat)eqValue {
-    CGFloat hzValue = 0;
-    if(eqValue >= 20 && eqValue <= 20000) {
-        hzValue = logf(eqValue/20.0)/EQPARA;
-        CGFloat perX = (CGFloat)SliderW/120;
-        self.thumbRect = CGRectMake(hzValue*perX+Slider_StartX-ThumbImageWH/2, Slider_StartY-(ThumbImageWH)/2, ThumbImageWH, ThumbImageWH);
-        self.isFirst = YES;
-        [self setNeedsDisplay];
-    }
-}
-
 
 
 
