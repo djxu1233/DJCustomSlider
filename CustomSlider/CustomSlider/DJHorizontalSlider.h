@@ -1,5 +1,5 @@
 //
-//  DJSlider.h
+//  DJHorizontalSlider.h
 //  CustomSlider
 //
 //  Created by 广州凯笙 on 2017/9/12.

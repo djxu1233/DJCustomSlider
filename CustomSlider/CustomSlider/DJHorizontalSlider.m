@@ -1,5 +1,5 @@
 //
-//  DJSlider.m
+//  DJHorizontalSlider.m
 //  CustomSlider
 //
 //  Created by 广州凯笙 on 2017/9/12.
@@ -73,8 +73,14 @@
     CGContextSetStrokeColorWithColor(context, [UIColor colorWithRed:61/255.0f green:61/255.0f blue:61/255.0f alpha:1.0].CGColor);
     CGContextStrokePath(context);
     
+    CGFloat pathW = 0;
+    if (!_isFirst) {
+        pathW = 0;
+    } else {
+        pathW = self.thumbRect.origin.x+ThumbImageWH/2;
+    }
     // 用BezierPath画高亮滑杆
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(ThumbImageWH/2-Slider_StartX, Slider_StartY-7.5, self.thumbRect.origin.x+ThumbImageWH/2, SliderH) cornerRadius:SliderH/2];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(ThumbImageWH/2-Slider_StartX, Slider_StartY-7.5, pathW, SliderH) cornerRadius:SliderH/2];
     [[UIColor colorWithRed:189/255.0f green:189/255.0f blue:189/255.0f alpha:1.0f] setFill];
     [[UIColor colorWithRed:189/255.0f green:189/255.0f blue:189/255.0f alpha:1.0f] setStroke];
     [path fill];

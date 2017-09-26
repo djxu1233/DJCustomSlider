@@ -1,5 +1,5 @@
 //
-//  KSVerticalSlider.h
+//  DJVerticalSlider.h
 //  CustomSlider
 //
 //  Created by 广州凯笙 on 2017/9/13.

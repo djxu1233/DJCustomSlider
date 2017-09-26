@@ -1,5 +1,5 @@
 //
-//  KSVerticalSlider.m
+//  DJVerticalSlider.m
 //  CustomSlider
 //
 //  Created by 广州凯笙 on 2017/9/13.
@@ -68,7 +68,14 @@
     CGContextStrokePath(context);
     
     // 用BezierPath画高亮滑杆
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(Slider_StartX-7.5, Slider_StartY-7.5, SliderW, self.thumbRect.origin.y+ThumbImageWH/2) cornerRadius:SliderH/2];
+    CGFloat pathH = 0;
+    if (!_isFirst) {
+        pathH = 0;
+    } else {
+        pathH = self.thumbRect.origin.y+ThumbImageWH/2;
+    }
+    // 用BezierPath画高亮滑杆
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(Slider_StartX-7.5, Slider_StartY-7.5, SliderW, pathH) cornerRadius:SliderH/2];
     [[UIColor colorWithRed:189/255.0f green:189/255.0f blue:189/255.0f alpha:1.0f] setFill];
     [[UIColor colorWithRed:189/255.0f green:189/255.0f blue:189/255.0f alpha:1.0f] setStroke];
     [path fill];
